@@ -7,14 +7,22 @@
       defaults    = {
         // propertyName: 'value'
       },
+
       editorBar = [
-        '<div class="tinywig-buttons">',
-          '<div data-action="bold" class="tinywig-button fa fa-bold"></div>',
-          '<div data-action="italic" class="tinywig-button fa fa-italic"></div>',
-          '<div data-action="underline" class="tinywig-button fa fa-underline"></div>',
-          '<div data-action="strikethrough" class="tinywig-button fa fa-strikethrough"></div>',
-          '<div data-action="picture" class="tinywig-button fa fa-picture-o"></div>',
-          '<div data-action="quote" class="tinywig-button fa fa-quote-left"></div>',
+        '<div class="tinywig-edit-buttons tinywig-bar">',
+          '<div data-action="bold" class="tinywig-edit-button fa fa-bold"></div>',
+          '<div data-action="italic" class="tinywig-edit-button fa fa-italic"></div>',
+          '<div data-action="underline" class="tinywig-edit-button fa fa-underline"></div>',
+          '<div data-action="strikethrough" class="tinywig-edit-button fa fa-strikethrough"></div>',
+          '<div data-action="picture" class="tinywig-edit-button fa fa-picture-o"></div>',
+          '<div data-action="quote" class="tinywig-edit-button fa fa-quote-left"></div>',
+        '</div>'
+      ].join(''),
+
+      saveBar = [
+        '<div class="tinywig-done-buttons tinywig-bar">',
+          '<div data-action="bold" class="tinywig-done-button tinywig-done-button-ok fa fa-check"></div>',
+          '<div data-action="italic" class="tinywig-done-button tinywig-done-button-undo fa fa-undo"></div>',
         '</div>'
       ].join('');
 
@@ -29,6 +37,7 @@
     this.settings     = $.extend( {}, defaults, options );
     this._defaults    = defaults;
     this._editorBar   = editorBar;
+    this._saveBar     = saveBar;
     this._name        = pluginName;
     this.init();
   }
@@ -52,9 +61,12 @@
 
       $el.empty().addClass('tinywig-editor')
         .prepend(this._editorBar)
-        .append($tempCont);
+        .append($tempCont)
+        .append(this._saveBar);
 
-      $el.find('.tinywig-button').on('mousedown', function(e) {
+      $tempCont.focus();
+
+      $el.find('.tinywig-edit-button').on('mousedown', function(e) {
         e.preventDefault();
         var $this   = $(this),
             action  = $this.data('action');

@@ -2,8 +2,13 @@
 /* [ VARS ] */
 /* --------------------------------------------------- */
 
-$buttonColor: #333;
-$buttonHoverColor: #26ADE4;
+$buttonColor              : #333;
+$buttonHoverColor         : #26ADE4;
+$focusShadowColor         : #26ADE4;
+
+$buttonDoneColor          : #fff;
+$buttonDoneOkBackground   : $buttonHoverColor;
+$buttonDoneUndoBackground : #c9c9c9;
 
 /* --------------------------------------------------- */
 /* [ EDITOR ] */
@@ -17,10 +22,6 @@ $buttonHoverColor: #26ADE4;
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1) inset, 0 1px 1px 1px rgba(255,255,255,.3);
   background: #fff;
   word-wrap: break-word;
-
-  &:focus {
-    outline: 0;
-  }
 }
 
 /* --------------------------------------------------- */
@@ -29,17 +30,20 @@ $buttonHoverColor: #26ADE4;
 
 .tinywig-temp-cont-wrap {
   padding: 12px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 3px 2px rgba($focusShadowColor, .2) inset;
+  }
 }
 
 /* --------------------------------------------------- */
 /* [ BUTTONS ] */
 /* --------------------------------------------------- */
 
-.tinywig-buttons {
+.tinywig-bar {
   background: linear-gradient(top, #fff, #DDDDDD);
-  border-bottom: 1px solid #bbb;
-  border-radius: 3px 3px 0 0;
-  box-shadow: 0 1px 1px 1px rgba(0,0,0,.07);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.07), 0 0 1px 1px rgba(255,255,255,.3) inset;
 
   &:before,
   &:after {
@@ -50,7 +54,16 @@ $buttonHoverColor: #26ADE4;
     clear: both;
   }
 
-  .tinywig-button {
+  &.tinywig-edit-buttons {
+    border-bottom: 1px solid #ddd;
+    border-radius: 3px 3px 0 0;
+  }
+  &.tinywig-done-buttons {
+    padding: 5px;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #ddd;
+  }
+  .tinywig-edit-button {
     float: left;
     border-right: 1px solid #ddd;
     display: inline-block;
@@ -59,9 +72,41 @@ $buttonHoverColor: #26ADE4;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     position: relative;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.7);
 
     &:hover {
       color: $buttonHoverColor;
+    }
+  }
+  .tinywig-done-button {
+    border-radius: 4px;
+    margin-right: 8px;
+    color: $buttonDoneColor;
+    cursor: pointer;
+    transition: 0.2s background ease-in-out;
+    box-shadow: 0 1px 1px 1px rgba(255,255,255,.12) inset;
+    font-size: 20px;
+    font-weight: bold;
+
+    &.tinywig-done-button-ok {
+      background: $buttonDoneOkBackground;
+      border: 1px solid darken($buttonDoneOkBackground, 3%);
+      text-shadow: -1px -1px 1px rgba( darken($buttonDoneOkBackground, 6%), .8), 1px 1px 1px rgba(#fff, .15);
+      padding: 5px 25px;
+
+      &:hover {
+        background: lighten($buttonDoneOkBackground, 5%);
+      }
+    }
+    &.tinywig-done-button-undo {
+      background: $buttonDoneUndoBackground;
+      border: 1px solid darken($buttonDoneUndoBackground, 3%);
+      text-shadow: -1px -1px 1px rgba( darken($buttonDoneUndoBackground, 6%), .8), 1px 1px 1px rgba(#fff, .15);
+      padding: 5px 10px;
+
+      &:hover {
+        background: lighten($buttonDoneUndoBackground, 5%);
+      }
     }
   }
 }
@@ -72,4 +117,13 @@ $buttonHoverColor: #26ADE4;
 
 .tinywig-bold {
   font-weight: bold;
+}
+.tinywig-italic {
+  font-style: italic;
+}
+.tinywig-underline {
+  text-decoration: underline;
+}
+.tinywig-strikethrough {
+  text-decoration: line-through;
 }
