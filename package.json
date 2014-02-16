@@ -1,0 +1,28 @@
+{
+  "name": "svg-canvas",
+  "version": "0.0.0",
+  "description": "jQuery SVG Plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickbuddendotcom/pxifySVG.git"
+  },
+  "author": "Nick Budden",
+  "homepage": "https://github.com/nickbuddendotcom/pxifySVG",
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "jshint": "~2.4.3",
+    "gulp-jshint": "~1.4.2",
+    "gulp-rename": "~1.0.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.1",
+    "gulp-sass": "~0.7.0",
+    "gulp-mocha": "~0.4.1",
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "jquery": "~2.1.0"
+  }
+}

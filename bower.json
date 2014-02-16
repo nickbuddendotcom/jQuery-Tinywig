@@ -1,0 +1,23 @@
+{
+  "name": "jquery-tinywig",
+  "version": "0.0.1",
+  "authors": [
+    "nickbuddendotcom <hello@nickbudden.com>"
+  ],
+  "description": "Tiny jQuery wysiwyg plugin",
+  "main": "jquery.tinywig.js",
+  "keywords": [
+    "wysiwyg",
+    "jquery",
+    "contentEditable"
+  ],
+  "license": "MIT",
+  "homepage": "http://nickbudden.com/jquery-tinywig",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
