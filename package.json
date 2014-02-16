@@ -1,29 +1,43 @@
 {
-  "name": "svg-canvas",
-  "version": "0.0.0",
-  "description": "jQuery SVG Plugin",
-  "main": "index.js",
+  "name": "jquery-tinywig",
+  "version": "0.0.1",
+  "description": "Tiny jQuery WYSIWYG contentEditable plugin",
+  "main": "./src/jquery.tinywig.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "~1.9.0",
+    "gulp": "~3.5.2",
+    "gulp-autoprefixer": "~0.0.6",
+    "gulp-concat": "~2.1.7",
+    "gulp-jshint": "~1.4.2",
+    "gulp-mocha": "~0.4.1",
+    "gulp-rename": "~1.0.0",
+    "gulp-sass": "~0.7.0",
+    "gulp-uglify": "~0.2.1",
+    "jquery": "~2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nickbuddendotcom/pxifySVG.git"
+    "url": "https://github.com/nickbuddendotcom/jQuery-Tinywig.git"
   },
-  "author": "Nick Budden",
-  "homepage": "https://github.com/nickbuddendotcom/pxifySVG",
-  "devDependencies": {
-    "gulp": "~3.5.2",
-    "jshint": "~2.4.3",
-    "gulp-jshint": "~1.4.2",
-    "gulp-rename": "~1.0.0",
-    "gulp-concat": "~2.1.7",
-    "gulp-uglify": "~0.2.1",
-    "gulp-sass": "~0.7.0",
-    "gulp-mocha": "~0.4.1",
-    "chai": "~1.9.0",
-    "mocha": "~1.17.1",
-    "jquery": "~2.1.0",
-    "gulp-autoprefixer": "0.0.6"
-  }
+  "keywords": [
+    "jquery",
+    "wysiwyg",
+    "rangy",
+    "contentEditable"
+  ],
+  "author": "nickbuddendotcom <hello@nickbudden.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickbuddendotcom/jQuery-Tinywig/issues"
+  },
+  "homepage": "https://github.com/nickbuddendotcom/jQuery-Tinywig"
 }

@@ -1,2 +1,58 @@
-.something {
-  border-radius: 5px; }
+/* --------------------------------------------------- */
+/* [ VARS ] */
+/* --------------------------------------------------- */
+/* --------------------------------------------------- */
+/* [ EDITOR ] */
+/* --------------------------------------------------- */
+.tinywig-editor {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 0;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1) inset, 0 1px 1px 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1) inset, 0 1px 1px 1px rgba(255, 255, 255, 0.3);
+  background: #fff;
+  word-wrap: break-word; }
+  .tinywig-editor:focus {
+    outline: 0; }
+
+/* --------------------------------------------------- */
+/* [ TEMPORARY CONTENT WRAP ] */
+/* --------------------------------------------------- */
+.tinywig-temp-cont-wrap {
+  padding: 12px; }
+
+/* --------------------------------------------------- */
+/* [ BUTTONS ] */
+/* --------------------------------------------------- */
+.tinywig-buttons {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#DDDDDD));
+  background: -webkit-linear-gradient(top, #fff, #DDDDDD);
+  background: linear-gradient(top, #fff, #DDDDDD);
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px 3px 0 0;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.07); }
+  .tinywig-buttons:before, .tinywig-buttons:after {
+    content: " ";
+    display: table; }
+  .tinywig-buttons:after {
+    clear: both; }
+  .tinywig-buttons .tinywig-button {
+    float: left;
+    border-right: 1px solid #ddd;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative; }
+    .tinywig-buttons .tinywig-button:hover {
+      color: #26ADE4; }
+
+/* --------------------------------------------------- */
+/* [ DECORATIONS ] */
+/* --------------------------------------------------- */
+.tinywig-bold {
+  font-weight: bold; }

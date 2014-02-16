@@ -5,7 +5,7 @@
     "nickbuddendotcom <hello@nickbudden.com>"
   ],
   "description": "Tiny jQuery wysiwyg plugin",
-  "main": "jquery.tinywig.js",
+  "main": "./src/jquery.tinywig.js",
   "keywords": [
     "wysiwyg",
     "jquery",
@@ -19,5 +19,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "rangy-1.3": "*"
+  }
 }

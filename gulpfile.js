@@ -39,13 +39,14 @@ gulp.task('scripts', function() {
 
 // test
 gulp.task('test', function () {
-    gulp.src('./test/spec/index.js')
+    gulp.src('./test/spec/spec.js')
         .pipe(mocha({reporter: 'nyan'}));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('./src/jquery.tinywig.js', ['lint', 'scripts', 'sass']);
+    gulp.watch('./src/jquery.tinywig.js', ['lint', 'scripts']);
+    gulp.watch('./src/scss/*.scss', ['sass']);
 });
 
 // Default Task

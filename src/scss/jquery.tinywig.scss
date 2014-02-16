@@ -1,3 +1,75 @@
-.something {
-  border-radius: 5px;
+/* --------------------------------------------------- */
+/* [ VARS ] */
+/* --------------------------------------------------- */
+
+$buttonColor: #333;
+$buttonHoverColor: #26ADE4;
+
+/* --------------------------------------------------- */
+/* [ EDITOR ] */
+/* --------------------------------------------------- */
+
+.tinywig-editor {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 0;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1) inset, 0 1px 1px 1px rgba(255,255,255,.3);
+  background: #fff;
+  word-wrap: break-word;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* --------------------------------------------------- */
+/* [ TEMPORARY CONTENT WRAP ] */
+/* --------------------------------------------------- */
+
+.tinywig-temp-cont-wrap {
+  padding: 12px;
+}
+
+/* --------------------------------------------------- */
+/* [ BUTTONS ] */
+/* --------------------------------------------------- */
+
+.tinywig-buttons {
+  background: linear-gradient(top, #fff, #DDDDDD);
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,.07);
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+  .tinywig-button {
+    float: left;
+    border-right: 1px solid #ddd;
+    display: inline-block;
+    padding: 10px 20px;
+    color: $buttonColor;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      color: $buttonHoverColor;
+    }
+  }
+}
+
+/* --------------------------------------------------- */
+/* [ DECORATIONS ] */
+/* --------------------------------------------------- */
+
+.tinywig-bold {
+  font-weight: bold;
 }

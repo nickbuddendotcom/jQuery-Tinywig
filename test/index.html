@@ -6,6 +6,10 @@
     <title>Mocha Spec Runner</title>
     <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
 
+    <!-- Deps -->
+    <link rel="stylesheet" href="../dist/css/jquery.tinywig.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -20,10 +24,11 @@
     </script>
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../dist/jquery.pxifySVG.min.js"></script>
+    <script src="../bower_components/rangy-1.3/rangy-core.js"></script>
+    <script src="../dist/jquery.tinywig.min.js"></script>
 
     <!-- [ SPEC FILES ] -->
-    <script src="./spec/index.js"></script>
+    <script src="./spec/spec.js"></script>
 
     <script>
       if (window.mochaPhantomJS) {

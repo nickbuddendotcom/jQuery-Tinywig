@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery Tinywig Example</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/jquery.tinywig.css">
+    <link rel="stylesheet" href="../demo/demo.css">
+
+</head>
+<body>
+
+    <div id="example">
+      <h1>Click to Edit</h1>
+
+      <p>
+      Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine.
+      You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water.
+      We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected,
+      you and I. We're on the same curve, just on opposite ends.
+      </p>
+
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/rangy-1.3/rangy-core.js"></script>
+    <script src="../dist/jquery.tinywig.js"></script>
+    <script type="text/javascript">
+
+      $(function() {
+        $('#example p').click(function(e) {
+          $(this).tinywig();
+        });
+      });
+
+    </script>
+</body>
+</html>
